@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ft-tytle: 'Staatliches', 'cursive';
+  --ft-body: 'Palanquin', 'sans-serif';
+  --ft-headerp: 'Roboto', 'sans-serif';
+  --ft-footer: 'open-sans', 'sans-serif';
+
+  --cl-bgbody: #EFF1FF;
+  --cl-bgbody2: #8E9AAF;
+  --cl-header: #D9D9D9;
+  --cl-bgheader: #CBC0D3;
+  --cl-headerh1: #fff;
+  --cl-bgh2: #FEEAFA;
+  --cl-h2: #4A4E69;
+  --cl-mainp: #23053A;
+  --cl-footer: #4A4E69;
+
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--cl-bgbody);
+}
+
+header {
+  text-align: center;
+
+  padding: 3.2rem 0 2.9rem;
+
+  background: var(--cl-header);
+}
+
+header img {
+  width: 137px;
+}
+
+
+
+header h1 {
+  background: var(--cl-bgheader);
+
+  font-family: var(--ft-tytle);
+  letter-spacing: 0.05em;
+
+  color: var(--cl-headerh1);
+  font-weight: 400;
+  font-size: 4.0rem;
+  line-height: 3.4rem;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  padding: 8px 0 7px;
+  margin-top: 1.5rem;
+}
+
+header p {
+  font-family: var(--ft-headerp);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 20px;
+
+  color: var(--cl-headerh1);
+  width: 27.5rem;
+  margin: 3.2rem auto;
+
+  
+}
+
+main{
+  padding: 1.4rem 0 6.0rem;
+
+  display: grid;
+  justify-items: center;
+}
+
+main p {
+  margin-bottom: 6.3rem;
+
+  padding: 0 5rem;
+  font-family: var(--ft-body);
+  font-weight: 400;
+  font-size: 2.0rem;
+  line-height: 1.5rem;
+
+  color: var(--cl-mainp);
+
+  text-align: justify;
+}
+
+.card {
+  display: grid;
+  gap: 3.6rem;
+}
+
+.ice {
+  position: relative;
+}
+
+.ice img {
+  width: 100%;
+  height: auto;
+  
+  animation: img 600ms;
+}
+
+.ice h2 {
+  position: absolute;
+  left: 19.2rem;
+  top: 1.6rem;  
+
+  animation: txt 900ms 500ms backwards;
+}
+
+.ice h2 span {
+  font-family: var(--ft-tytle);
+  font-weight: 400;
+  font-size: 2.0rem;
+  line-height: 3.4rem;
+
+  color: #4A4E69;
+  background: #FEEAFA;
+  border-radius: 20px;
+  width: 11.2rem;
+
+  display: inline-flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+footer {
+  font-family: var(--ft-footer);
+
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+
+  text-align: center;
+
+  color: var(--cl-footer);
+
+
+}
+
+@keyframes img {
+  0% {
+    opacity: 0;
+    transform: translatey(15px);
+  }
+
+  100% {
+
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes txt {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@media (max-width: 1420px) {
+  header p {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+}
+
+@media (min-width: 320px) {
+  .hiden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    display: grid;
+    gap: 3.5rem;
+    grid-template-areas: "A C" "B D"; 
+  }
+
+  .card div:nth-child(1) {
+    grid-area: A;
+  }
+
+  .card div:nth-child(2) {
+    grid-area: B;
+  }
+
+  .card div:nth-child(3) {
+    grid-area: C;
+  }
+
+  .card div:nth-child(4) {
+    grid-area: D;
+  }
+
+}
+
+@media (min-width: 1420px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  header {
+    width: 37.7rem;
+    background: var(--cl-bgbody2);
+  }
+
+  header h1 {
+    padding: 2.1rem ;
+    font-size: 4.8rem;
+  }
+
+  header > img {
+    display: none;
+  }
+
+  #logo img {
+   width: 21.44rem;
+   height: 21.44rem;
+
+  }
+
+  main {
+    padding-bottom: 5rem;
+  }
+
+  main p {
+    display: none;
+  }
+
+  .card {
+    grid-template-areas: "A B E" "D B F" "D C F";
+    margin: 6.4rem 9.3rem 5.0rem; 
+    gap: 3.2rem;
+    height: auto;
+
+  }
+
+  .card div:nth-child(1) {
+    grid-area: A;
+  }
+
+  .card div:nth-child(2) {
+    grid-area: B;
+  }
+
+  .card div:nth-child(3) {
+    grid-area: C;
+  }
+
+  .card div:nth-child(4) {
+    grid-area: D;
+  }
+
+  .card div:nth-child(5) {
+    grid-area: E;
+  }
+
+  .card div:nth-child(6) {
+    grid-area: F;
+  }
+
+  .ice {
+    max-height: 35.0rem;
+  
+  }
+
+  .ice h2 span {
+    display: none;
+  }
+
+  .ice img {
+    height: 100%;
+  }
+
+  .ice img:hover {
+    transform: scale(1.1);
+  }
+
+  .hiden {
+    display: block;
+  }
+
+  footer {
+    margin-bottom: 4.6rem;
+  }
+
+}

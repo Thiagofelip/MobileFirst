@@ -1,0 +1,1 @@
+This project was created with Mobile First ideas and with a lot of attention to responsiveness
